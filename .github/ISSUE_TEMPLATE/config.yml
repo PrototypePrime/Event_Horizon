@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & Help
+    url: https://github.com/PrototypePrime/Event-Horizon/discussions/categories/q-a
+    about: Get help and ask questions in our Discussions
+  - name: 💡 Ideas & Feature Voting
+    url: https://github.com/PrototypePrime/Event-Horizon/discussions/categories/ideas
+    about: Share ideas and vote on features in Discussions
+  - name: 📖 Documentation
+    url: https://github.com/PrototypePrime/Event-Horizon#-documentation
+    about: Check our documentation for guides and tutorials

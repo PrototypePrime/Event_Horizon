@@ -1,0 +1,51 @@
+title: "[IDEA] "
+labels:
+  - idea
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Share Your Idea!
+        Thanks for helping improve Event-Horizon! Share your feature ideas here and the community can vote and discuss.
+
+  - type: textarea
+    id: idea-description
+    attributes:
+      label: 💡 Idea Description
+      description: Describe your idea clearly
+      placeholder: I think it would be great if Event-Horizon could...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🎯 Problem it Solves
+      description: What problem or limitation does this address?
+      placeholder: Currently, I have to manually... / It's difficult to...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 📂 Category
+      options:
+        - New Sourcetype/Template
+        - UI/UX Improvement
+        - AI Features
+        - Performance
+        - Integration
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: Any mockups, examples, or references?
+      placeholder: Add links, screenshots, or examples...
+    validations:
+      required: false

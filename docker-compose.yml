@@ -1,0 +1,18 @@
+# Event-Horizon Docker Compose
+# Usage: docker compose up -d
+
+services:
+  event-horizon:
+    image: ghcr.io/prototypeprime/event-horizon:latest
+    container_name: event-horizon
+    ports:
+      - "${PORT:-3000}:3000"
+    restart: unless-stopped
+    environment:
+      - TZ=${TZ:-UTC}
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+    # Mount host timezone for accurate log timestamps (Linux/Mac only)
+    # On Windows, set TZ environment variable instead (e.g., TZ=Asia/Kolkata)
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
