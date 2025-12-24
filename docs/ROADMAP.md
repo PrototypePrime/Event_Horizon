@@ -269,4 +269,4 @@ splunk log generator roadmap, future features log generator, upcoming splunk fea
 log generator development roadmap, multi-siem support, qradar log generation, sentinel logs,
 chronicle log generation, deepseek validation, real-time log streaming, kubernetes deployment,
 detection engineering roadmap, soc tool roadmap, splunk community roadmap, open source roadmap
---> | **[View FAQ →](FAQ.md)**
+-->

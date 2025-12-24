@@ -143,7 +143,7 @@ Result: 4 separate data sources telling one coherent story
 ```
 
 **WOW Factor:**
-- 🔥 **81 supported sourcetypes** - complete attack chain coverage
+- 🔥 **75+ supported sourcetypes** - complete attack chain coverage
 - 🧠 **AI generates realistic TTPs** based on your scenario
 - ⏰ **Timezone-aware** - logs appear in SOC's local time
 - 🎯 **IOC injection** - test threat intel integration

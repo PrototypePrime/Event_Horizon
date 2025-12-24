@@ -317,4 +317,4 @@ log generator help, splunk hec questions, ollama faq, ai log generation question
 splunk troubleshooting, log format questions, template questions, soc training faq,
 log correlation faq, attack simulation questions, splunk performance questions,
 air-gapped splunk faq, compliance logging questions, synthetic data questions
---> | **[View Use Cases →](USE_CASES.md)** | **[Read Roadmap →](ROADMAP.md)**
+-->

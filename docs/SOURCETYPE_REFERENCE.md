@@ -6,7 +6,7 @@ This document lists all supported sourcetypes with their verification status and
 
 | Status | Description |
 |--------|-------------|
-| ✅ **Verified** | Production-ready templates with validated format accuracy |
+| ✅ **Verified** | Production-ready templates approved by user & Splunk TA testing |
 | 🧪 **Beta** | Functional templates under active refinement |
 | 📋 **Planned** | On roadmap for future implementation |
 
@@ -16,10 +16,10 @@ This document lists all supported sourcetypes with their verification status and
 
 | Sourcetype | Status | Required Add-on | Splunkbase ID |
 |:-----------|:------:|:----------------|:--------------|
-| `XmlWinEventLog:Security` | ✅ Verified | Splunk Add-on for Microsoft Windows | 742 |
-| `XmlWinEventLog:System` | ✅ Verified | Splunk Add-on for Microsoft Windows | 742 |
-| `XmlWinEventLog:Sysmon` | ✅ Verified | Splunk Add-on for Microsoft Windows | 742 |
-| `XmlWinEventLog:PowerShell` | ✅ Verified | Splunk Add-on for Microsoft Windows | 742 |
+| `XmlWinEventLog:Security` | ✅ Verified | [Splunk Add-on for Microsoft Windows](https://splunkbase.splunk.com/app/742) | 742 |
+| `XmlWinEventLog:System` | ✅ Verified | [Splunk Add-on for Microsoft Windows](https://splunkbase.splunk.com/app/742) | 742 |
+| `XmlWinEventLog:Sysmon` | ✅ Verified | [Splunk Add-on for Microsoft Windows](https://splunkbase.splunk.com/app/742) | 742 |
+| `XmlWinEventLog:PowerShell` | ✅ Verified | [Splunk Add-on for Microsoft Windows](https://splunkbase.splunk.com/app/742) | 742 |
 | `syslog` | 🧪 Beta | Splunk Add-on for Unix and Linux | 833 |
 | `linux_secure` | 🧪 Beta | Splunk Add-on for Unix and Linux | 833 |
 | `auditd` | 🧪 Beta | Splunk Add-on for Unix and Linux | 833 |
@@ -40,14 +40,15 @@ This document lists all supported sourcetypes with their verification status and
 
 | Sourcetype | Status | Required Add-on | Splunkbase ID |
 |:-----------|:------:|:----------------|:--------------|
-| `pan:traffic` | ✅ Verified | Splunk Add-on for Palo Alto Networks | 2757 |
-| `pan:threat` | ✅ Verified | Splunk Add-on for Palo Alto Networks | 2757 |
-| `pan:system` | ✅ Verified | Splunk Add-on for Palo Alto Networks | 2757 |
-| `cisco:ios` | ✅ Verified | Splunk Add-on for Cisco Catalyst | 7538 |
-| `cisco:asa` | ✅ Verified | Splunk Add-on for Cisco ASA | 1620 |
-| `cisco:firepower:syslog` | ✅ Verified | CCX Unified Add-on for Cisco Firepower | 4785 |
-| `fgt_log` | 🧪 Beta | Splunk Add-on for Fortinet FortiGate | 2846 |
-| `fortigate_traffic` | 🧪 Beta | Splunk Add-on for Fortinet FortiGate | 2846 |
+| `pan:traffic` | ✅ Verified | [Splunk Add-on for Palo Alto Networks](https://splunkbase.splunk.com/app/2757) | 2757 |
+| `pan:threat` | ✅ Verified | [Splunk Add-on for Palo Alto Networks](https://splunkbase.splunk.com/app/2757) | 2757 |
+| `pan:system` | ✅ Verified | [Splunk Add-on for Palo Alto Networks](https://splunkbase.splunk.com/app/2757) | 2757 |
+| `cisco:ios` | ✅ Verified | [Splunk Add-on for Cisco Catalyst](https://splunkbase.splunk.com/app/7538) | 7538 |
+| `cisco:asa` | ✅ Verified | [Splunk Add-on for Cisco ASA](https://splunkbase.splunk.com/app/1620) | 1620 |
+| `cisco:firepower:syslog` | ✅ Verified | [CCX Unified Add-on for Cisco Firepower](https://splunkbase.splunk.com/app/4785) | 4785 |
+| `fortigate_traffic` | ✅ Verified | [Splunk Add-on for Fortinet FortiGate](https://splunkbase.splunk.com/app/2846) | 2846 |
+| `fortigate_event` | ✅ Verified | [Splunk Add-on for Fortinet FortiGate](https://splunkbase.splunk.com/app/2846) | 2846 |
+| `fortigate_utm` | ✅ Verified | [Splunk Add-on for Fortinet FortiGate](https://splunkbase.splunk.com/app/2846) | 2846 |
 | `juniper:junos` | 🧪 Beta | Splunk Add-on for Juniper | 2845 |
 | `juniper:junos:firewall` | 🧪 Beta | Splunk Add-on for Juniper | 2845 |
 | `f5:bigip:ltm` | 🧪 Beta | Splunk Add-on for F5 BIG-IP | 2680 |
@@ -63,7 +64,7 @@ This document lists all supported sourcetypes with their verification status and
 
 | Sourcetype | Status | Required Add-on | Splunkbase ID |
 |:-----------|:------:|:----------------|:--------------|
-| `aws:cloudtrail` | ✅ Verified | Splunk Add-on for AWS | 1876 |
+| `aws:cloudtrail` | ✅ Verified | [Splunk Add-on for AWS](https://splunkbase.splunk.com/app/1876) | 1876 |
 | `aws:cloudwatch:vpc_flow` | 🧪 Beta | Splunk Add-on for AWS | 1876 |
 | `aws:flow_logs` | 🧪 Beta | Splunk Add-on for AWS | 1876 |
 | `aws:s3:accesslogs` | 🧪 Beta | Splunk Add-on for AWS | 1876 |
@@ -85,7 +86,7 @@ This document lists all supported sourcetypes with their verification status and
 | `okta:system` | 🧪 Beta | Splunk Add-on for Okta | 2806 |
 | `azure:aad:signin` | 🧪 Beta | Splunk Add-on for Microsoft Cloud Services | 3110 |
 | `azure:aad:audit` | 🧪 Beta | Splunk Add-on for Microsoft Cloud Services | 3110 |
-| `Cisco:ISE:Syslog` | ✅ Verified | Splunk Add-on for Cisco ISE | 1915 |
+| `Cisco:ISE:Syslog` | ✅ Verified | [Splunk Add-on for Cisco ISE](https://splunkbase.splunk.com/app/1915) | 1915 |
 | `duo:authentication` | 🧪 Beta | Splunk Add-on for Duo Security | 3393 |
 | `mssql:audit` | 🧪 Beta | Splunk Add-on for Microsoft SQL Server | 5631 |
 | `oracle:audit:xml` | 🧪 Beta | Splunk Add-on for Oracle | 1910 |
@@ -141,18 +142,18 @@ This document lists all supported sourcetypes with their verification status and
 | Category | Total | Verified | Beta |
 |:---------|------:|:--------:|:----:|
 | Endpoints | 17 | 4 | 13 |
-| Network | 15 | 6 | 9 |
+| Network | 14 | 9 | 5 |
 | Cloud | 11 | 1 | 10 |
 | Identity | 9 | 1 | 8 |
 | Security | 8 | 0 | 8 |
 | Applications | 21 | 0 | 21 |
-| **Total** | **81** | **12** | **69** |
+| **Total** | **80** | **15** | **65** |
 
 ---
 
 ## Contributing
 
-To request a new sourcetype or report template issues, please open an issue on GitHub.
+To request a new sourcetype or report template issues, please [open an issue on GitHub](https://github.com/PrototypePrime/Event_Horizon/issues).
 
 ---
 
