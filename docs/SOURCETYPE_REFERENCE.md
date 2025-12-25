@@ -121,21 +121,11 @@ This document lists all supported sourcetypes with their verification status and
 | `nginx:access` | 🧪 Beta | Splunk Add-on for NGINX | 3258 |
 | `ms:o365:reporting:messagetrace` | 🧪 Beta | Splunk Add-on for Microsoft Office 365 | 4055 |
 | `o365:management:activity` | 🧪 Beta | Splunk Add-on for Microsoft Office 365 | 4055 |
-| `proofpoint:tap:message` | 🧪 Beta | Splunk Add-on for Proofpoint TAP | 3822 |
-| `proofpoint:tap:click` | 🧪 Beta | Splunk Add-on for Proofpoint TAP | 3822 |
-| `mimecast:gateway` | 🧪 Beta | Splunk Add-on for Mimecast | 3717 |
-| `mimecast:siem` | 🧪 Beta | Splunk Add-on for Mimecast | 3717 |
+| `proofpoint_tap_siem` | ✅ Verified | Splunk Add-on for Proofpoint TAP | 3822 |
+| `mimecastsiemst` | ✅ Verified | Mimecast for Splunk | 4075 |
 | `zscaler:lss` | 🧪 Beta | Splunk Add-on for Zscaler | N/A |
-| `zscaler:web` | 🧪 Beta | Zscaler Technical Add-On for Splunk | 3865 |
-| `infoblox:dns` | 🧪 Beta | Splunk Add-on for Infoblox | 2940 |
-| `infoblox:dhcp` | 🧪 Beta | Splunk Add-on for Infoblox | 2940 |
-| `WinEventLog:DNS-Server` | 🧪 Beta | Splunk Add-on for Microsoft DNS | 3632 |
-| `MS_DNS_Server` | 🧪 Beta | Splunk Add-on for Microsoft DNS | 3632 |
-| `dhcp` | 🧪 Beta | Splunk Add-on for ISC DHCP | N/A |
-| `WinEventLog:Dhcp-Server` | 🧪 Beta | Splunk Add-on for Microsoft DHCP | N/A |
-| `cisco:ios:dhcp` | 🧪 Beta | Splunk Add-on for Cisco Catalyst | 7538 |
 
----
+...
 
 ## Summary
 
@@ -146,8 +136,8 @@ This document lists all supported sourcetypes with their verification status and
 | Cloud | 11 | 1 | 10 |
 | Identity | 9 | 1 | 8 |
 | Security | 8 | 0 | 8 |
-| Applications | 21 | 0 | 21 |
-| **Total** | **80** | **15** | **65** |
+| Applications | 21 | 1 | 20 |
+| **Total** | **80** | **16** | **64** |
 
 ---
 
