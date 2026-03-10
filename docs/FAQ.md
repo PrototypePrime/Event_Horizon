@@ -27,7 +27,7 @@
 - AI Auto-Discovery mode
 - Custom content generation
 
-For template-based generation (81 sourcetypes), no AI is needed. You can generate millions of logs using templates alone.
+For template-based generation (75+ sourcetypes), no AI is needed. You can generate millions of logs using templates alone.
 
 ---
 
@@ -108,7 +108,7 @@ ollama pull gpt-oss:120b-cloud
 ---
 
 ### Q: Can I customize the templates?
-**A:** The Docker image comes with 81 pre-built templates covering all major security platforms. For custom sourcetype requests, please [open a feature request](https://github.com/PrototypePrime/Event_Horizon/discussions).
+**A:** The Docker image comes with 75+ pre-built templates covering all major security platforms. For custom sourcetype requests, please [open a feature request](https://github.com/PrototypePrime/Event_Horizon/discussions).
 
 ---
 
@@ -173,6 +173,26 @@ All timestamps respect the sourcetype's native format.
 
 ---
 
+### Q: Why does Event-Horizon use HEC (HTTP Event Collector)?
+**A:** Event-Horizon exclusively supports **HEC-compatible sourcetypes** for the following reasons:
+
+**What is HEC?**
+HEC (HTTP Event Collector) is Splunk's modern API for sending log data programmatically. It's the industry-standard method for automated log ingestion.
+
+**Why HEC-only?**
+- ✅ **Direct integration** - No need for intermediate forwarders or file drops
+- ✅ **Real-time delivery** - Logs appear in Splunk instantly
+- ✅ **Programmatic control** - Perfect for automated testing and CI/CD
+- ✅ **Scalable** - Handles high-volume generation efficiently
+- ✅ **Cloud-friendly** - Works with Splunk Cloud and on-premises
+
+**Sourcetype Selection:**
+All 80+ sourcetypes in Event-Horizon are carefully selected to work seamlessly with HEC. We use industry-standard formats (JSON, Syslog, XML, CSV) and modern Splunk Add-on configurations that support HEC ingestion.
+
+If you're using file-based ingestion methods (Universal Forwarders, etc.), the generated logs will still work - just download them instead of using the HEC push feature.
+
+---
+
 ## Troubleshooting
 
 ### Q: "Connection refused" error for Ollama
@@ -228,7 +248,7 @@ Common issues:
 
 **Tips:**
 - Ensure Ollama is running on GPU if available
-- Use template-based generation (81 sourcetypes) for instant results
+- Use template-based generation (75+ sourcetypes) for instant results
 
 ---
 

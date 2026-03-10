@@ -21,7 +21,7 @@ This document lists all supported sourcetypes with their verification status, de
 | `XmlWinEventLog:Sysmon` | ✅ Verified | Sysmon telemetry (process, network, file, registry activity) | [Splunk Add-on for Microsoft Windows](https://splunkbase.splunk.com/app/742) | 742 |
 | `XmlWinEventLog:PowerShell` | ✅ Verified | PowerShell script execution and command logging | [Splunk Add-on for Microsoft Windows](https://splunkbase.splunk.com/app/742) | 742 |
 | `syslog` | 🧪 Beta | Generic Unix/Linux syslog messages | Splunk Add-on for Unix and Linux | 833 |
-| `linux_secure` | 🧪 Beta | Linux authentication logs (SSH, sudo, login failures) | Splunk Add-on for Unix and Linux | 833 |
+| `linux_secure` | ✅ Verified | Linux authentication logs (RFC 3164) with Universal KV Extraction | [Splunk Add-on for Unix and Linux](https://splunkbase.splunk.com/app/833) (Optional) | 833 |
 | `auditd` | 🧪 Beta | Linux system call auditing (file access, syscalls, permission changes) | Splunk Add-on for Unix and Linux | 833 |
 | `crowdstrike:json` | 🧪 Beta | CrowdStrike Falcon EDR detections and events | Splunk Add-on for CrowdStrike FDR | 5094 |
 | `cs:falcon:event` | 🧪 Beta | CrowdStrike Falcon process and endpoint activity | Splunk Add-on for CrowdStrike FDR | 5094 |
@@ -68,13 +68,15 @@ This document lists all supported sourcetypes with their verification status, de
 | Sourcetype | Status | Required Add-on | Splunkbase ID |
 |:-----------|:------:|:----------------|:--------------|
 | `aws:cloudtrail` | ✅ Verified | [Splunk Add-on for AWS](https://splunkbase.splunk.com/app/1876) | 1876 |
-| `aws:cloudwatch:vpc_flow` | 🧪 Beta | Splunk Add-on for AWS | 1876 |
-| `aws:flow_logs` | 🧪 Beta | Splunk Add-on for AWS | 1876 |
-| `aws:s3:accesslogs` | 🧪 Beta | Splunk Add-on for AWS | 1876 |
-| `aws:cloudwatch:guardduty` | 🧪 Beta | Splunk Add-on for AWS | 1876 |
-| `azure:activity:log` | 🧪 Beta | Azure infrastructure activity logs (NOT Azure AD - see Identity section) | Splunk Add-on for Microsoft Cloud Services | 3110 |
-| `azure:audit` | 🧪 Beta | Generic Azure audit logs (NOT Azure AD - see Identity section) | Splunk Add-on for Microsoft Cloud Services | 3110 |
-| `azure:networksecuritygroup:flow` | 🧪 Beta | Azure NSG flow logs for network traffic analysis | Splunk Add-on for Microsoft Cloud Services | 3110 |
+| `aws:cloudwatchlogs:vpcflow` | ✅ Verified | [Splunk Add-on for AWS](https://splunkbase.splunk.com/app/1876) | 1876 |
+| `aws:flow_logs` | ✅ Verified | Alias for aws:cloudwatchlogs:vpcflow | 1876 |
+| `aws:s3:accesslogs` | ✅ Verified | Splunk Add-on for AWS | 1876 |
+| `aws:cloudwatchlogs:guardduty` | ✅ Verified | Splunk Add-on for AWS | 1876 |
+| `aws:securityhub:finding` | ✅ Verified | Splunk Add-on for AWS | 1876 |
+| `aws:elb:accesslogs` | ✅ Verified | Splunk Add-on for AWS | 1876 |
+| `mscs:azure:audit` | ✅ Verified | [Splunk Add-on for Microsoft Cloud Services](https://splunkbase.splunk.com/app/3110) | 3110 |
+| `mscs:nsg:flow` | ✅ Verified | [Splunk Add-on for Microsoft Cloud Services](https://splunkbase.splunk.com/app/3110) | 3110 |
+| `azure:activity:log` | ⚠️ Deprecated | Alias for `mscs:azure:audit` | - | - |
 | `vmware:esx:syslog` | 🧪 Beta | Splunk Add-on for VMware | 3215 |
 | `vmware:vcenter` | 🧪 Beta | Splunk Add-on for VMware | 3215 |
 | `WinEventLog:Microsoft-Windows-Hyper-V-VMMS` | 🧪 Beta | Splunk Add-on for Microsoft Hyper-V | N/A |
@@ -118,14 +120,13 @@ This document lists all supported sourcetypes with their verification status, de
 
 | Sourcetype | Status | Required Add-on | Splunkbase ID |
 |:-----------|:------:|:----------------|:--------------|
-| `iis` | 🧪 Beta | Splunk Add-on for Microsoft IIS | 3185 |
-| `ms:iis:auto` | 🧪 Beta | Splunk Add-on for Microsoft IIS | 3185 |
-| `access_combined` | 🧪 Beta | Splunk Add-on for Apache Web Server | 3186 |
-| `apache:access` | 🧪 Beta | Splunk Add-on for Apache Web Server | 3186 |
-| `apache:error` | 🧪 Beta | Splunk Add-on for Apache Web Server | 3186 |
-| `nginx:access` | 🧪 Beta | [Splunk Add-on for NGINX](https://splunkbase.splunk.com/app/3258) | 3258 |
-| `ms:o365:reporting:messagetrace` | 🧪 Beta | [Splunk Add-on for Microsoft Office 365](https://splunkbase.splunk.com/app/4055) | 4055 |
-| `o365:management:activity` | 🧪 Beta | [Splunk Add-on for Microsoft Office 365](https://splunkbase.splunk.com/app/4055) | 4055 |
+| `iis` | 🧪 Beta | Uses `ms:iis:splunk` format (HEC-compatible, DELIMS extraction) | Splunk Add-on for Microsoft IIS | 3185 |
+| `ms:iis:splunk` | 🧪 Beta | IIS logs with 25 fields (HEC-compatible, recommended) | Splunk Add-on for Microsoft IIS | 3185 |
+| `access_combined` | 🧪 Beta | System Default | - |
+| `access_error` | 🧪 Beta | System Default | - |
+| `nginx:plus:access` | 🧪 Beta | [Splunk Add-on for NGINX](https://splunkbase.splunk.com/app/3258) | 3258 |
+| `ms:o365:reporting:messagetrace` | ✅ Verified | [Splunk Add-on for Microsoft Office 365](https://splunkbase.splunk.com/app/4055) | 4055 |
+| `o365:management:activity` | ✅ Verified | [Splunk Add-on for Microsoft Office 365](https://splunkbase.splunk.com/app/4055) | 4055 |
 | `proofpoint_tap_siem` | ✅ Verified | Proofpoint TAP threat intelligence (phishing, malware, BEC detections) | [Splunk Add-on for Proofpoint TAP](https://splunkbase.splunk.com/app/3822) | 3822 |
 | `mimecastsiemst` | ✅ Verified | Mimecast email security (spam, TTP, impersonation, delivery logs) | [Mimecast for Splunk](https://splunkbase.splunk.com/app/4075) | 4075 |
 | `zscalerlss-zpa-app` | ✅ Verified | Zscaler Private Access application logs (app access, blocked attempts) | [TA-Zscaler_CIM](https://splunkbase.splunk.com/app/3865) | 3865 |
@@ -154,13 +155,13 @@ This document lists all supported sourcetypes with their verification status, de
 
 | Category | Total | Verified | Beta |
 |:---------|------:|:--------:|:----:|
-| Endpoints | 17 | 4 | 13 |
+| Endpoints | 17 | 5 | 12 |
 | Network | 19 | 10 | 9 |
-| Cloud | 12 | 2 | 10 |
+| Cloud | 14 | 10 | 4 |
 | Identity | 10 | 5 | 5 |
 | Security | 9 | 0 | 9 |
-| Applications | 41 | 5 | 36 |
-| **Total** | **108** | **26** | **82** |
+| Applications | 41 | 7 | 34 |
+| **Total (75+ Active)** | **110** | **37** | **73** |
 
 ---
 

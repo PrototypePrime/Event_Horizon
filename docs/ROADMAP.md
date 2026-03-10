@@ -14,7 +14,7 @@ Our vision for the future of Event-Horizon.
   - One-command deployment
   - Docker Compose support
   - Multi-platform (AMD64, ARM64)
-- ✅ **81 Production Templates**
+- ✅ **75+ Production Templates**
   - Complete sourcetype library
   - Golden Master validation
   - Verified accuracy
@@ -237,7 +237,7 @@ Our vision for the future of Event-Horizon.
 ## 📈 Progress Tracking
 
 **Current Stats:**
-- ✅ **81 Templates** (v2.1)
+- ✅ **75+ Templates** (v2.1)
 - ✅ **100k+ Generated Logs** (community)
 - ✅ **15+ Contributors**
 - 🎯 **Target: 100+ Templates** (v2.2)

@@ -120,14 +120,19 @@ Configure Splunk HEC and Ollama AI from one centralized settings panel with conn
 
 ### Option 1: Docker Run (Simplest)
 
-**Basic:**
+**Basic (uses existing local image):**
+```bash
+docker run -p 3000:3000 ghcr.io/prototypeprime/event-horizon:latest
+```
+
+**Always pull latest version:**
 ```bash
 docker run --pull=always -p 3000:3000 ghcr.io/prototypeprime/event-horizon:latest
 ```
 
 **With Ollama (for AI attack scenarios):**
 ```bash
-docker run --pull=always -p 3000:3000 \
+docker run -p 3000:3000 \
   -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \
   ghcr.io/prototypeprime/event-horizon:latest
 ```
@@ -223,7 +228,7 @@ Event-Horizon uses Ollama to generate realistic attack scenarios.
 
 **🌐 Web/Proxy**
 - Apache
-- IIS
+- IIS (ms:iis:splunk)
 - NGINX
 - Squid
 - [+8 more](docs/SOURCETYPE_REFERENCE.md)
